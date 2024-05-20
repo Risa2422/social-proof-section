@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+:root {
+  --main-dark-color: hsl(300, 43%, 22%);
+  --main-light-color: hsl(303, 10%, 53%);
+  --submain-color: hsl(300, 24%, 96%);
+  --description-color: hsl(0, 0%, 100%);
+  --description-subsolor: hsl(333, 80%, 67%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* I tried to use two types of images for the background, but seems it doesn't work.. */
+  font-family: "League Spartan", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  background-image: url(./images/bg-pattern-top-desktop.svg),
+    url(./images/bg-pattern-bottom-desktop.svg);
+  background-size: 50%, 50%;
+  background-repeat: no-repeat, no-repeat;
+  background-position: top, bottom;
+}
+
+.container {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.content {
+  margin: 7.5rem 7rem 3rem;
+  padding: 10px;
+  min-width: 900px;
+  min-height: 500px;
+}
+
+.about {
+  display: flex;
+  min-width: 400px;
+  height: 250px;
+  gap: 10%;
+}
+
+.description {
+  /* I got confused how to assign the widths for .description and .evaluations.. */
+  width: 40%;
+}
+
+.description h1 {
+  color: var(--main-dark-color);
+  margin-bottom: 1rem;
+  margin-right: 10rem;
+  width: 300px;
+  font-size: 40px;
+}
+
+.description p {
+  color: var(--main-light-color);
+  line-height: 1.5rem;
+}
+
+.evaluations {
+  width: 50%;
+}
+
+.evaluation {
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 15px 5px 15px 15px;
+  width: 340px;
+  gap: 14px;
+  align-items: center;
+  color: var(--main-dark-color);
+  background-color: var(--submain-color);
+}
+
+.first-evaluation {
+  display: flex;
+  margin-right: auto;
+}
+
+.second-evaluation {
+  display: flex;
+  margin-right: auto;
+  margin-left: 40px;
+}
+
+.third-evaluation {
+  display: flex;
+  margin-right: auto;
+  margin-left: 80px;
+}
+
+.logo img {
+  /* I want to make each logo(stars) smaller, but I can't find how to*/
+  gap: 3px;
+}
+
+.reviews {
+  display: flex;
+  gap: 25px;
+}
+
+.profile {
+  display: flex;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.picture img {
+  /* I think you suggested me using "flex:0 0 25px" to set the size of images, can I use it for this challenge as well? */
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+.position {
+  padding-top: 3px;
+  color: var(--description-subsolor);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+}
+
+.review {
+  padding: 30px 25px;
+  background-color: var(--main-dark-color);
+  border-radius: 8px;
+  color: var(--submain-color);
+  font-weight: lighter;
+  font-size: 14px;
+  height: 200px;
+}
+
+.second-review {
+  margin: 15px 0;
+}
+
+.third-review {
+  margin: 25px 0;
+}
+
+.comment {
+  margin-top: 20px;
+  line-height: 18px;
+  font-size: 14px;
+}

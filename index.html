@@ -3,59 +3,112 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
+    <link rel="stylesheet" href="./style.css" />
     <title>Frontend Mentor | Social proof section</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
-    10,000+ of our users love our products.
-
-    We only provide great products combined with excellent customer service.
-    See what our satisfied customers are saying about our services.
-    
-    Rated 5 Stars in Reviews
-    Rated 5 Stars in Report Guru
-    Rated 5 Stars in BestTech
-    
-    Colton Smith 
-    Verified Buyer
-    "We needed the same printed design as the one we had ordered a week prior.
-    Not only did they find the original order, but we also received it in time.
-    Excellent!"
-    
-    Irene Roberts 
-    Verified Buyer
-    "Customer service is always excellent and very quick turn around. Completely
-    delighted with the simplicity of the purchase and the speed of delivery."
-    
-    Anne Wallace 
-    Verified Buyer
-    "Put an order with this company and can only praise them for the very high
-    standard. Will definitely use them again and recommend them to everyone!"
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    <main class="container">
+      <div class="content">
+        <div class="about">
+          <div class="description">
+            <h1>10,000+ of our users love our products.</h1>
+            <p>
+              We only provide great products combined with excellent customer
+              service.See what our satisfied customers are saying about our
+              services.
+            </p>
+          </div>
+          <div class="evaluations">
+            <div class="evaluation first-evaluation">
+              <div class="logo">
+                <!-- I think there are other efficient ways to do this below... -->
+                <img src="./images/icon-star.svg" alt="" />
+                <img src="./images/icon-star.svg" alt="" />
+                <img src="./images/icon-star.svg" alt="" />
+                <img src="./images/icon-star.svg" alt="" />
+                <img src="./images/icon-star.svg" alt="" />
+              </div>
+              <p>Rated 5 Stars in Reviews</p>
+            </div>
+            <div class="evaluation second-evaluation">
+              <div class="logo">
+                <img src="./images/icon-star.svg" alt="" />
+                <img src="./images/icon-star.svg" alt="" />
+                <img src="./images/icon-star.svg" alt="" />
+                <img src="./images/icon-star.svg" alt="" />
+                <img src="./images/icon-star.svg" alt="" />
+              </div>
+              <p>Rated 5 Stars in Report Guru</p>
+            </div>
+            <div class="evaluation third-evaluation">
+              <div class="logo">
+                <img src="./images/icon-star.svg" alt="" />
+                <img src="./images/icon-star.svg" alt="" />
+                <img src="./images/icon-star.svg" alt="" />
+                <img src="./images/icon-star.svg" alt="" />
+                <img src="./images/icon-star.svg" alt="" />
+              </div>
+              <p>Rated 5 Stars in Best Tech</p>
+            </div>
+          </div>
+        </div>
+        <div class="reviews">
+          <div class="review first-review">
+            <div class="profile">
+              <div class="picture">
+                <img src="./images/image-colton.jpg" alt="" />
+              </div>
+              <div class="details">
+                <span class="name"> Colton Smith </span>
+                <span class="position"> Verified Buyer </span>
+              </div>
+            </div>
+            <p class="comment">
+              " We needed the same printed design as the one we had ordered a
+              week prior. Not only did they find the original order, but we also
+              received it in time. Excellent!"
+            </p>
+          </div>
+          <div class="review second-review">
+            <div class="profile">
+              <div class="picture">
+                <img src="./images/image-irene.jpg" alt="" />
+              </div>
+              <div class="details">
+                <span class="name"> Irene Roberts </span>
+                <span class="position"> Verified Buyer </span>
+              </div>
+            </div>
+            <p class="comment">
+              " Customer service is always excellent and very quick turn around.
+              Completely delighted with the simplicity of the purchase and the
+              speed of delivery."
+            </p>
+          </div>
+          <div class="review third-review">
+            <div class="profile">
+              <div class="picture">
+                <img src="./images/image-anne.jpg" alt="" />
+              </div>
+              <div class="details">
+                <span class="name"> Anne Wallace </span>
+                <span class="position"> Verified Buyer </span>
+              </div>
+            </div>
+            <p class="comment">
+              " Put an order with this company and can only praise them for the
+              very high standard. Will definitely use them again and recommend
+              them to everyone!"
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
