@@ -23,7 +23,7 @@ body {
     url(./images/bg-pattern-bottom-desktop.svg);
   background-size: 50%, 50%;
   background-repeat: no-repeat, no-repeat;
-  background-position: top, bottom;
+  background-position: top left, bottom right; /* It works but you need to align the background images to the left and right :) */ 
 }
 
 .container {
@@ -40,21 +40,16 @@ body {
 
 .about {
   display: flex;
-  min-width: 400px;
-  height: 250px;
-  gap: 10%;
 }
 
 .description {
   /* I got confused how to assign the widths for .description and .evaluations.. */
-  width: 40%;
+  flex: 1;
 }
 
 .description h1 {
   color: var(--main-dark-color);
   margin-bottom: 1rem;
-  margin-right: 10rem;
-  width: 300px;
   font-size: 40px;
 }
 
@@ -64,14 +59,14 @@ body {
 }
 
 .evaluations {
-  width: 50%;
+  flex: 0 0 440px;
+  display: flex;
+  flex-direction: column;
 }
 
 .evaluation {
   border-radius: 10px;
-  margin-top: 10px;
   padding: 15px 5px 15px 15px;
-  width: 340px;
   gap: 14px;
   align-items: center;
   color: var(--main-dark-color);
@@ -80,18 +75,17 @@ body {
 
 .first-evaluation {
   display: flex;
-  margin-right: auto;
+  margin-right: 80px;
 }
 
 .second-evaluation {
   display: flex;
-  margin-right: auto;
+  margin-right: 40px;
   margin-left: 40px;
 }
 
 .third-evaluation {
   display: flex;
-  margin-right: auto;
   margin-left: 80px;
 }
 
@@ -136,15 +130,13 @@ body {
   color: var(--submain-color);
   font-weight: lighter;
   font-size: 14px;
-  height: 200px;
 }
 
-.second-review {
-  margin: 15px 0;
-}
-
-.third-review {
-  margin: 25px 0;
+.review-star {
+  display: inline-block;
+  width: 17px;
+  height: 16px;
+  background: url('./images/icon-star.svg') no-repeat center center;
 }
 
 .comment {
