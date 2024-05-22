@@ -32,19 +32,22 @@ body {
 }
 
 .content {
-  margin: 7.5rem 7rem 3rem;
+  margin: 2rem auto;
   padding: 10px;
-  min-width: 900px;
-  min-height: 500px;
+  max-width: 900px;
+  width: 100%;
 }
 
 .about {
   display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  flex-direction: column;
 }
 
 .description {
   /* I got confused how to assign the widths for .description and .evaluations.. */
-  flex: 1;
+  flex: 0 1 100%;
 }
 
 .description h1 {
@@ -59,12 +62,15 @@ body {
 }
 
 .evaluations {
-  flex: 0 0 440px;
+  flex: 0 1 100%;
   display: flex;
   flex-direction: column;
+  gap: .5rem;
 }
 
 .evaluation {
+  display: flex;
+  flex-direction: column;
   border-radius: 10px;
   padding: 15px 5px 15px 15px;
   gap: 14px;
@@ -73,20 +79,11 @@ body {
   background-color: var(--submain-color);
 }
 
-.first-evaluation {
-  display: flex;
-  margin-right: 80px;
-}
-
-.second-evaluation {
-  display: flex;
-  margin-right: 40px;
-  margin-left: 40px;
-}
-
-.third-evaluation {
-  display: flex;
-  margin-left: 80px;
+.review-star {
+  display: inline-block;
+  width: 17px;
+  height: 16px;
+  background: url('./images/icon-star.svg') no-repeat center center;
 }
 
 .logo img {
@@ -97,6 +94,7 @@ body {
 .reviews {
   display: flex;
   gap: 25px;
+  flex-direction: column;
 }
 
 .profile {
@@ -124,6 +122,8 @@ body {
 }
 
 .review {
+  flex: 1;
+  position: relative;
   padding: 30px 25px;
   background-color: var(--main-dark-color);
   border-radius: 8px;
@@ -132,15 +132,60 @@ body {
   font-size: 14px;
 }
 
-.review-star {
-  display: inline-block;
-  width: 17px;
-  height: 16px;
-  background: url('./images/icon-star.svg') no-repeat center center;
-}
-
 .comment {
   margin-top: 20px;
   line-height: 18px;
   font-size: 14px;
+}
+
+@media (min-width: 900px) {
+  .content {
+    margin: 7.5rem auto 3rem;
+  }
+
+  .about {
+    flex-direction: row;
+  }
+
+  .description {
+    flex-basis: 500px;
+  }
+
+  .evaluations {
+    flex: 0 0 440px;
+  }
+
+  .evaluation {
+    flex-direction: row;
+    align-items: start;
+  }
+  
+  .reviews {
+    flex-direction: row;
+  }
+
+  .first-evaluation {
+    margin-right: 80px;
+  }
+
+  .second-evaluation {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .third-evaluation {
+    margin-left: 80px;
+  }
+
+  .review:nth-child(1) {
+    top: 25px;
+  }
+  
+  .review:nth-child(2) {
+    top: 50px;
+  }
+  
+  .review:nth-child(3) {
+    top: 75px;
+  }
 }
