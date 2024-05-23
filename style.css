@@ -23,7 +23,7 @@ body {
     url(./images/bg-pattern-bottom-desktop.svg);
   background-size: 50%, 50%;
   background-repeat: no-repeat, no-repeat;
-  background-position: top, bottom;
+  background-position: top left, bottom right; /* It works but you need to align the background images to the left and right :) */ 
 }
 
 .container {
@@ -34,29 +34,27 @@ body {
 }
 
 .content {
-  margin: 7.5rem 7rem 3rem;
+  margin: 2rem auto;
   padding: 10px;
-  min-width: 900px;
-  min-height: 500px;
+  max-width: 900px;
+  width: 100%;
 }
 
 .about {
   display: flex;
-  min-width: 400px;
-  height: 250px;
-  gap: 10%;
+  justify-content: center;
+  margin-bottom: 1rem;
+  flex-direction: column;
 }
 
 .description {
   /* I got confused how to assign the widths for .description and .evaluations.. */
-  width: 40%;
+  flex: 0 1 100%;
 }
 
 .description h1 {
   color: var(--main-dark-color);
   margin-bottom: 1rem;
-  margin-right: 10rem;
-  width: 300px;
   font-size: 40px;
 }
 
@@ -66,35 +64,28 @@ body {
 }
 
 .evaluations {
-  width: 50%;
+  flex: 0 1 100%;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
 }
 
 .evaluation {
+  display: flex;
+  flex-direction: column;
   border-radius: 10px;
-  margin-top: 10px;
   padding: 15px 5px 15px 15px;
-  width: 340px;
   gap: 14px;
   align-items: center;
   color: var(--main-dark-color);
   background-color: var(--submain-color);
 }
 
-.first-evaluation {
-  display: flex;
-  margin-right: auto;
-}
-
-.second-evaluation {
-  display: flex;
-  margin-right: auto;
-  margin-left: 40px;
-}
-
-.third-evaluation {
-  display: flex;
-  margin-right: auto;
-  margin-left: 80px;
+.review-star {
+  display: inline-block;
+  width: 17px;
+  height: 16px;
+  background: url('./images/icon-star.svg') no-repeat center center;
 }
 
 .logo img {
@@ -105,6 +96,7 @@ body {
 .reviews {
   display: flex;
   gap: 25px;
+  flex-direction: column;
 }
 
 .profile {
@@ -113,10 +105,14 @@ body {
   gap: 10px;
 }
 
+.picture {
+  flex: 0 0 35px;
+}
+
 .picture img {
   /* I think you suggested me using "flex:0 0 25px" to set the size of images, can I use it for this challenge as well? */
-  height: 35px;
-  width: 35px;
+  height: 100%;
+  width: 100%;
   border-radius: 50%;
 }
 
@@ -132,25 +128,70 @@ body {
 }
 
 .review {
+  flex: 1;
+  position: relative;
   padding: 30px 25px;
   background-color: var(--main-dark-color);
   border-radius: 8px;
   color: var(--submain-color);
   font-weight: lighter;
   font-size: 14px;
-  height: 200px;
-}
-
-.second-review {
-  margin: 15px 0;
-}
-
-.third-review {
-  margin: 25px 0;
 }
 
 .comment {
   margin-top: 20px;
   line-height: 18px;
   font-size: 14px;
+}
+
+@media (min-width: 900px) {
+  .content {
+    margin: 7.5rem auto 3rem;
+  }
+
+  .about {
+    flex-direction: row;
+  }
+
+  .description {
+    flex-basis: 500px;
+  }
+
+  .evaluations {
+    flex: 0 0 440px;
+  }
+
+  .evaluation {
+    flex-direction: row;
+    align-items: start;
+  }
+  
+  .reviews {
+    flex-direction: row;
+  }
+
+  .first-evaluation {
+    margin-right: 80px;
+  }
+
+  .second-evaluation {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .third-evaluation {
+    margin-left: 80px;
+  }
+
+  .review:nth-child(1) {
+    top: 25px;
+  }
+  
+  .review:nth-child(2) {
+    top: 50px;
+  }
+  
+  .review:nth-child(3) {
+    top: 75px;
+  }
 }
