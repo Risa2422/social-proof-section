@@ -15,7 +15,6 @@
 }
 
 body {
-  /* I tried to use two types of images for the background, but seems it doesn't work.. */
   font-family: "League Spartan", sans-serif;
   font-weight: 600;
   font-size: 15px;
@@ -23,12 +22,10 @@ body {
     url(./images/bg-pattern-bottom-desktop.svg);
   background-size: 50%, 50%;
   background-repeat: no-repeat, no-repeat;
-  background-position: top left, bottom right; /* It works but you need to align the background images to the left and right :) */ 
+  background-position: top left, bottom right;
 }
 
 .container {
-    /* width: 100%; */
-    background-color: pink;
   min-width: 100vw;
   min-height: 100vh;
 }
@@ -48,7 +45,6 @@ body {
 }
 
 .description {
-  /* I got confused how to assign the widths for .description and .evaluations.. */
   flex: 0 1 100%;
 }
 
@@ -67,7 +63,7 @@ body {
   flex: 0 1 100%;
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .evaluation {
@@ -85,11 +81,10 @@ body {
   display: inline-block;
   width: 17px;
   height: 16px;
-  background: url('./images/icon-star.svg') no-repeat center center;
+  background: url("./images/icon-star.svg") no-repeat center center;
 }
 
 .logo img {
-  /* I want to make each logo(stars) smaller, but I can't find how to*/
   gap: 3px;
 }
 
@@ -110,7 +105,6 @@ body {
 }
 
 .picture img {
-  /* I think you suggested me using "flex:0 0 25px" to set the size of images, can I use it for this challenge as well? */
   height: 100%;
   width: 100%;
   border-radius: 50%;
@@ -165,7 +159,7 @@ body {
     flex-direction: row;
     align-items: start;
   }
-  
+
   .reviews {
     flex-direction: row;
   }
@@ -186,11 +180,11 @@ body {
   .review:nth-child(1) {
     top: 25px;
   }
-  
+
   .review:nth-child(2) {
     top: 50px;
   }
-  
+
   .review:nth-child(3) {
     top: 75px;
   }
