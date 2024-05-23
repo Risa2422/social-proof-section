@@ -1,1 +1,1 @@
-## 1. This is a [challenge](https://www.frontendmentor.io/challenges/social-proof-section-6e0qTv_bA) by Frontend Mentor.
+## This is a [challenge](https://www.frontendmentor.io/challenges/social-proof-section-6e0qTv_bA) by Frontend Mentor.
